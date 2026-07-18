@@ -1,0 +1,18 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.video_container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    column-gap: 5.16rem;
+    row-gap: 2rem;
+    width: fit-content;
+    box-sizing: border-box;
+}
+
