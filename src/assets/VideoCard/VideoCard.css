@@ -1,22 +1,64 @@
 .video_card{
+    background-color: rgb(56, 56, 56);
+    position: relative;
     width: 15rem;
     text-align: left;
     border: 1px solid black;
     border-radius: 10px;
-    padding: 0,5rem;
+    padding: 1rem;
     box-sizing: border-box;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    transition: all 0.9s ease;
 }
 
 .video_img {
+    position: relative;
     width: 30%;
-    margin: 0 auto;
+    aspect-ratio: 1 / 1;
+    top: 10px;
+    left: 10px;
+    box-sizing: border-box;
 }
 
 
-.video p {
-    margin: 0.2rem 0.2rem;
+p {
+    margin-left: 10px;
+    color: rgb(43, 165, 226);
 }
 
 .video_footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin: 0.2rem 0.2rem;
+}
+
+.btn {
+    position: relative;
+    margin-right: 5px;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: rgb(48, 105, 133);
+    transition: all 0.9s ease;
+}
+
+.btn:hover {
+    border: none;
+    outline: none;
+    background-color: rgb(43, 165, 226);
+    transition: all 0.9s ease;
+}
+
+.likes_counter {
+    position: relative;
+    margin-left: 5px;
+}
+
+.video_card:hover {
+    transition: all 0.9s ease;
+    background-color: rgb(72, 78, 85);
+    scale: 1.1;
+
 }
