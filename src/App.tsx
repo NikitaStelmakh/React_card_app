@@ -1,7 +1,9 @@
-import { useState } from 'react'
-import VideoCard from './assets/VideoCard/VideoCard.tsx'
-import './App.css'
-import {VIDEOS} from './videos.tsx'
+import { useState } from 'react';
+import VideoCard from './assets/VideoCard/VideoCard.tsx';
+import './App.css';
+import { VIDEOS } from './videos.tsx';
+import { Routes, Route } from 'react-router-dom';
+import VideoPage from './VideoPage.tsx';
 
 function App() {
 
@@ -9,6 +11,7 @@ function App() {
     return (
       <VideoCard
         key={video.id}
+        id={video.id}
         title={video.title}
         channelName={video.channel}
         img={video.img}/>
@@ -17,11 +20,25 @@ function App() {
   )
 
   return (
-    <>
-      <div className="video_container">
-        {cardsRender}
-      </div>
-    </>
+    
+    <Routes>
+
+      <Route
+        path='/'
+        element={
+          <div className="video_container">
+            {cardsRender}
+          </div>
+        }
+        />
+
+      <Route
+        path='/video/:id'  
+        element={<VideoPage/>}
+        />
+
+    </Routes>
+    
   )
 }; 
 
