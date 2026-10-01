@@ -1,20 +1,21 @@
 import { useState } from 'react';
-import VideoCard from './assets/VideoCard/VideoCard.tsx';
+import ArticleCard from './assets/VideoCard/VideoCard.tsx';
 import './App.css';
-import { VIDEOS } from './videos.tsx';
+import { DOCUMENTATION } from './videos.tsx';
 import { Routes, Route } from 'react-router-dom';
-import VideoPage from './VideoPage.tsx';
+import ArticlePage from './VideoPage.tsx';
 
 function App() {
 
-  const cardsRender = VIDEOS.map((video) => {
+  const cardsRender = DOCUMENTATION.map((article) => {
     return (
-      <VideoCard
-        key={video.id}
-        id={video.id}
-        title={video.title}
-        channelName={video.channel}
-        img={video.img}/>
+      <ArticleCard
+        key={article.id}
+        id={article.id}
+        title={article.title}
+        contents={article.contents}
+        img={article.img}
+        description={article.description}/>
       );
     }
   )
@@ -33,8 +34,8 @@ function App() {
         />
 
       <Route
-        path='/video/:id'  
-        element={<VideoPage/>}
+        path='/article/:id'  
+        element={<ArticlePage/>}
         />
 
     </Routes>

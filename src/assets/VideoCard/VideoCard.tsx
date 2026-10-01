@@ -2,24 +2,25 @@ import './VideoCard.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-type VideoCardProps = {
+export type ArticleCardProps = {
     title: string;
-    channelName: string;
+    contents: any;
     img: string;
-    id: number;
+    id: string;
+    description: string;
 }
 
-function VideoCard({title, channelName, img, id}: VideoCardProps) {
+function ArticleCard({title, img, id, description}: ArticleCardProps) {
     const [likesCount, setLikesCount] = useState(0)
 
     const increaseLikesCount = () => setLikesCount(likesCount +1);
 
     return (
         <div className="video_card">
-            <Link to={`/video/${id}`} className="video_link">
+            <Link to={`/article/${id}`} className="video_link">
               <img className="video_img" src={img} alt="example image" />
               <p>{title}</p>
-              <p>{channelName}</p>
+              <p>{description}</p>
             </Link>
             <div className="video_footer">
                 <div className="likes_counter">
@@ -31,4 +32,4 @@ function VideoCard({title, channelName, img, id}: VideoCardProps) {
     )
 }
 
-export default VideoCard
+export default ArticleCard

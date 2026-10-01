@@ -1,57 +1,68 @@
-import reactLogo from './assets/react.svg'
-import angularLogo from './assets/angular.webp'
-import javaScriptLogo from './assets/JS.webp'
-import typeScriptLogo from './assets/Typescript.webp'
-import htmlLogo from './assets/HTML5.webp'
-import vueLogo from './assets/Vue.js.webp'
+import reactLogo from './assets/react.svg';
+import angularLogo from './assets/angular.webp';
+import javaScriptLogo from './assets/JS.webp';
+import typeScriptLogo from './assets/Typescript.webp';
+import htmlLogo from './assets/HTML5.webp';
+import vueLogo from './assets/Vue.js.webp';
+import jestArticle from "./articles/jest_main_methods.md?raw";
+import ReduxRTKArticle from "./articles/Redux_RTK.md?raw";
+import reactRouterArticle from "./articles/react-router.md?raw";
 
-export const VIDEOS = [
+export const DOCUMENTATION = [
     {
         id: "1",
-        title: "JS level 3 React app",
-        channel: "HTML Academy",
-        img: reactLogo
+        title: "Jest and React testing library",
+        contents: jestArticle,
+        img: reactLogo,
+        description: "",
     },
      {
         id: "2",
-        title: "JS level 1 ",
-        channel: "HTML Academy",
-        img: javaScriptLogo
+        title: "Redux & RTK",
+        contents: ReduxRTKArticle,
+        img: javaScriptLogo,
+        description: "",
     }, 
      {
         id: "3",
-        title: "JS level 2",
-        channel: "HTML Academy",
-        img: javaScriptLogo
+        title: "React router",
+        contents: reactRouterArticle,
+        img: javaScriptLogo,
+        description: "",
     }, 
      {
         id: "4",
         title: "TypeScript",
-        channel: "HTML Academy",
-        img: typeScriptLogo 
+        contents: typescriptArticle,
+        img: typeScriptLogo,
+        description: "", 
     }, 
      {
         id: "5",
         title: "HTML/CSS",
-        channel: "HTML Academy",
-        img: htmlLogo 
+        contents: axiosArticle,
+        img: htmlLogo,
+        description: "",
     }, 
      {
         id: "6",
         title: "Angular",
-        channel: "HTML Academy",
-        img: angularLogo
+        contents: viteArticle,
+        img: angularLogo,
+        description: "",
     }, 
      {
         id: "7",
         title: "Vue JS",
-        channel: "HTML Academy",
-        img: vueLogo
+        contents: hooksArticle,
+        img: vueLogo,
+        description: "",
     }, 
      {
         id: "8",
         title: "React Native",
-        channel: "HTML Academy",
-        img: reactLogo
+        contents: JSXArticle,
+        img: reactLogo,
+        description: "",
     },
 ];

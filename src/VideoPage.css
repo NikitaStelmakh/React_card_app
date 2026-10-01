@@ -8,4 +8,6 @@ body {
   background-repeat: no-repeat;
 }
 
-
+.page_img {
+    max-height: 30vh;
+}
