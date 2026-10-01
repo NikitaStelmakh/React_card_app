@@ -6,7 +6,13 @@ import htmlLogo from './assets/HTML5.webp';
 import vueLogo from './assets/Vue.js.webp';
 import jestArticle from "./articles/jest_main_methods.md?raw";
 import ReduxRTKArticle from "./articles/Redux_RTK.md?raw";
-import reactRouterArticle from "./articles/react-router.md?raw";
+import reactRouterArticle from "./articles/react_router.md?raw";
+import typeScriptArticle from "./articles/typeScript.md?raw";
+import axiosArticle from "./articles/axios.md?raw";
+import viteArticle from "./articles/vite.md?raw";
+import webpackArticle from "./articles/webpack.md?raw";
+import JSXArticle from "./articles/jsx.md?raw";
+
 
 export const DOCUMENTATION = [
     {
@@ -33,34 +39,34 @@ export const DOCUMENTATION = [
      {
         id: "4",
         title: "TypeScript",
-        contents: typescriptArticle,
+        contents: typeScriptArticle,
         img: typeScriptLogo,
         description: "", 
     }, 
      {
         id: "5",
-        title: "HTML/CSS",
+        title: "Axios",
         contents: axiosArticle,
         img: htmlLogo,
         description: "",
     }, 
      {
         id: "6",
-        title: "Angular",
+        title: "Vite",
         contents: viteArticle,
         img: angularLogo,
         description: "",
     }, 
      {
         id: "7",
-        title: "Vue JS",
-        contents: hooksArticle,
+        title: "WEBpack",
+        contents: webpackArticle,
         img: vueLogo,
         description: "",
     }, 
      {
         id: "8",
-        title: "React Native",
+        title: "JSX",
         contents: JSXArticle,
         img: reactLogo,
         description: "",
