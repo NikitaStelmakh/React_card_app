@@ -71,4 +71,18 @@ export const DOCUMENTATION = [
         img: reactLogo,
         description: "",
     },
+    {
+        id: "9",
+        title: "Regex",
+        contents: JSXArticle,
+        img: reactLogo,
+        description: "",
+    },
+    {
+        id: "10",
+        title: "Markdown",
+        contents: JSXArticle,
+        img: reactLogo,
+        description: "",
+    },
 ];

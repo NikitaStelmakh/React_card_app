@@ -11,3 +11,11 @@ body {
 .page_img {
     max-height: 30vh;
 }
+
+.markdown {
+    text-align: left;
+}
+
+.markdown pre {
+    font-size: 16px;
+}
