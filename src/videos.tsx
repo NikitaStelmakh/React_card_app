@@ -10,7 +10,7 @@ import reactRouterArticle from "./articles/react_router.md?raw";
 import typeScriptArticle from "./articles/typeScript.md?raw";
 import axiosArticle from "./articles/axios.md?raw";
 import viteArticle from "./articles/vite.md?raw";
-import webpackArticle from "./articles/webpack.md?raw";
+import markdownArticle from "./articles/markdown.md?raw";
 import JSXArticle from "./articles/jsx.md?raw";
 
 
@@ -59,8 +59,8 @@ export const DOCUMENTATION = [
     }, 
      {
         id: "7",
-        title: "WEBpack",
-        contents: webpackArticle,
+        title: "markdown",
+        contents: markdownArticle,
         img: vueLogo,
         description: "",
     }, 
@@ -74,13 +74,6 @@ export const DOCUMENTATION = [
     {
         id: "9",
         title: "Regex",
-        contents: JSXArticle,
-        img: reactLogo,
-        description: "",
-    },
-    {
-        id: "10",
-        title: "Markdown",
         contents: JSXArticle,
         img: reactLogo,
         description: "",

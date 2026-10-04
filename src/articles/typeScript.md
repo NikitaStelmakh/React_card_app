@@ -9,7 +9,7 @@ This tutorial provides a brief overview of TypeScript, focusing on its type syst
 Types by Inference
 TypeScript knows the JavaScript language and will generate types for you in many cases. For example in creating a variable and assigning it to a particular value, TypeScript will use the value as its type.
 
-```
+```ts
 let helloWorld = "Hello World";     
 let helloWorld: string
 ```
@@ -21,28 +21,28 @@ Defining Types
 You can use a wide variety of design patterns in JavaScript. However, some design patterns make it difficult for types to be inferred automatically (for example, patterns that use dynamic programming). To cover these cases, TypeScript supports an extension of the JavaScript language, which offers places for you to tell TypeScript what the types should be.
 
 For example, to create an object with an inferred type which includes name: string and id: number, you can write:
-```
+```ts
 const user = {
   name: "Hayes",
   id: 0,
 };
 ```
 You can explicitly describe this object’s shape using an interface declaration:
-```
+```ts
 interface User {
   name: string;
   id: number;
 }
 ```
 You can then declare that a JavaScript object conforms to the shape of your new interface by using syntax like : TypeName after a variable declaration:
-```
+```ts
 const user: User = {
   name: "Hayes",
   id: 0,
 };
 ```
 If you provide an object that doesn’t match the interface you have provided, TypeScript will warn you:
-```
+```ts
 interface User {
   name: string;
   id: number;
@@ -55,7 +55,7 @@ Object literal may only specify known properties, and 'username' does not exist 
 };
 ```
 Since JavaScript supports classes and object-oriented programming, so does TypeScript. You can use an interface declaration with classes:
-```
+```ts
 interface User {
   name: string;
   id: number;
@@ -74,7 +74,7 @@ class UserAccount {
 const user: User = new UserAccount("Murphy", 1);
 ```
 You can use interfaces to annotate parameters and return values to functions:
-```
+```ts
 function deleteUser(user: User) {
   // ...
 }
@@ -92,25 +92,25 @@ With TypeScript, you can create complex types by combining simple ones. There ar
 
 Unions
 With a union, you can declare that a type could be one of many types. For example, you can describe a boolean type as being either true or false:
-```
+```ts
 type MyBool = true | false;
 ```
 Note: If you hover over MyBool above, you’ll see that it is classed as boolean. That’s a property of the Structural Type System. More on this below.
 
 A popular use-case for union types is to describe the set of string or number literals that a value is allowed to be:
-```
+```ts
 type WindowStates = "open" | "closed" | "minimized";
 type LockStates = "locked" | "unlocked";
 type PositiveOddNumbersUnderTen = 1 | 3 | 5 | 7 | 9;
 ```
 Unions provide a way to handle different types too. For example, you may have a function that takes an array or a string:
-```
+```ts
 function getLength(obj: string | string[]) {
   return obj.length;
 }
 ```
 To learn the type of a variable, use typeof:
-```
+```ts
 Type	Predicate
 string	typeof s === "string"
 number	typeof n === "number"
@@ -120,7 +120,7 @@ function	typeof f === "function"
 array	Array.isArray(a)
 ```
 For example, you can make a function return different values depending on whether it is passed a string or an array:
-```
+```ts
 function wrapInArray(obj: string | string[]) {
   if (typeof obj === "string") {
     return [obj];
@@ -132,7 +132,7 @@ function wrapInArray(obj: string | string[]) {
 ```
 Generics
 Generics provide variables to types. A common example is an array. An array without generics could contain anything. An array with generics can describe the values that the array contains.
-```
+```ts
 type StringArray = Array<string>;
 
 type NumberArray = Array<number>;
@@ -140,7 +140,7 @@ type NumberArray = Array<number>;
 type ObjectWithNameArray = Array<{ name: string }>;
 ```
 You can declare your own types that use generics:
-```
+```ts
 interface Backpack<Type> {
   add: (obj: Type) => void;
   get: () => Type;
@@ -161,7 +161,7 @@ Structural Type System
 One of TypeScript’s core principles is that type checking focuses on the shape that values have. This is sometimes called “duck typing” or “structural typing”.
 
 In a structural type system, if two objects have the same shape, they are considered to be of the same type.
-```
+```ts
 interface Point {
   x: number;
   y: number;
@@ -172,14 +172,14 @@ function logPoint(p: Point) {
 }
 ```
 // logs "12, 26"
-```
+```ts
 const point = { x: 12, y: 26 };
 logPoint(point);
 ```
 The point variable is never declared to be a Point type. However, TypeScript compares the shape of point to the shape of Point in the type-check. They have the same shape, so the code passes.
 
 The shape-matching only requires a subset of the object’s fields to match.
-```
+```ts
 const point3 = { x: 12, y: 26, z: 89 };
 logPoint(point3); // logs "12, 26"
  
@@ -192,7 +192,7 @@ Argument of type '{ hex: string; }' is not assignable to parameter of type 'Poin
   Type '{ hex: string; }' is missing the following properties from type 'Point': x, y
 ```
 There is no difference between how classes and objects conform to shapes:
-```
+```ts
 class VirtualPoint {
   x: number;
   y: number;
