@@ -1,6 +1,7 @@
 import { DOCUMENTATION } from "./videos";
 import { useParams } from 'react-router-dom';
 import './VideoPage.css';
+import ArticleNavigation from './header.tsx';
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -54,6 +55,7 @@ function ArticlePage() {
         >
           {article.contents}
         </ReactMarkdown>
+        <ArticleNavigation></ArticleNavigation>
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import javaScriptLogo from './assets/JS.webp';
 import typeScriptLogo from './assets/Typescript.webp';
 import htmlLogo from './assets/HTML5.webp';
 import vueLogo from './assets/Vue.js.webp';
+import ReduxLogo from './assets/redux2.svg';
 import jestArticle from "./articles/jest_main_methods.md?raw";
 import ReduxRTKArticle from "./articles/Redux_RTK.md?raw";
 import reactRouterArticle from "./articles/react_router.md?raw";
@@ -26,7 +27,7 @@ export const DOCUMENTATION = [
         id: "2",
         title: "Redux & RTK",
         contents: ReduxRTKArticle,
-        img: javaScriptLogo,
+        img: ReduxLogo,
         description: "",
     }, 
      {
@@ -72,3 +73,5 @@ export const DOCUMENTATION = [
         description: "",
     },
 ];
+
+export default DOCUMENTATION

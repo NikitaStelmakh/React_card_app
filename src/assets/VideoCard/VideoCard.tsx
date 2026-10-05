@@ -24,9 +24,9 @@ function ArticleCard({title, img, id, description}: ArticleCardProps) {
             </Link>
             <div className="video_footer">
                 <div className="likes_counter">
-                    <p>Like: {likesCount}</p>
+                    <p>Usefull: {likesCount}</p>
                 </div>
-                <button className="btn" onClick={increaseLikesCount}>Like</button>
+                <button className="btn" onClick={increaseLikesCount}>Usefull</button>
             </div>
         </div>
     )
