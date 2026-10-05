@@ -11,7 +11,7 @@ import typeScriptArticle from "./articles/typeScript.md?raw";
 import axiosArticle from "./articles/axios.md?raw";
 import viteArticle from "./articles/vite.md?raw";
 import markdownArticle from "./articles/markdown.md?raw";
-import JSXArticle from "./articles/jsx.md?raw";
+import RegexArticle from "./articles/regex.md?raw";
 
 
 export const DOCUMENTATION = [
@@ -59,22 +59,15 @@ export const DOCUMENTATION = [
     }, 
      {
         id: "7",
-        title: "markdown",
+        title: "Markdown",
         contents: markdownArticle,
         img: vueLogo,
         description: "",
     }, 
      {
         id: "8",
-        title: "JSX",
-        contents: JSXArticle,
-        img: reactLogo,
-        description: "",
-    },
-    {
-        id: "9",
         title: "Regex",
-        contents: JSXArticle,
+        contents: RegexArticle,
         img: reactLogo,
         description: "",
     },
