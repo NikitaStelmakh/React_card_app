@@ -1,9 +1,10 @@
-import reactLogo from './assets/react.svg';
-import angularLogo from './assets/angular.webp';
-import javaScriptLogo from './assets/JS.webp';
+import jestLogo from './assets/jest.png';
+import reactRouterLogo from './assets/reactRouter.png';
+import regexLogo from './assets/regex.svg';
+import markdownLogo from './assets/markdown.png';
 import typeScriptLogo from './assets/Typescript.webp';
-import htmlLogo from './assets/HTML5.webp';
-import vueLogo from './assets/Vue.js.webp';
+import axiosLogo from './assets/axios.png';
+import viteLogo from './assets/viteLogo.webp';
 import ReduxLogo from './assets/redux2.svg';
 import jestArticle from "./articles/jest_main_methods.md?raw";
 import ReduxRTKArticle from "./articles/Redux_RTK.md?raw";
@@ -20,7 +21,7 @@ export const DOCUMENTATION = [
         id: "1",
         title: "Jest and React testing library",
         contents: jestArticle,
-        img: reactLogo,
+        img: jestLogo,
         description: "",
     },
      {
@@ -34,7 +35,7 @@ export const DOCUMENTATION = [
         id: "3",
         title: "React router",
         contents: reactRouterArticle,
-        img: javaScriptLogo,
+        img: reactRouterLogo,
         description: "",
     }, 
      {
@@ -48,28 +49,28 @@ export const DOCUMENTATION = [
         id: "5",
         title: "Axios",
         contents: axiosArticle,
-        img: htmlLogo,
+        img: axiosLogo,
         description: "",
     }, 
      {
         id: "6",
         title: "Vite",
         contents: viteArticle,
-        img: angularLogo,
+        img: viteLogo,
         description: "",
     }, 
      {
         id: "7",
         title: "Markdown",
         contents: markdownArticle,
-        img: vueLogo,
+        img: markdownLogo,
         description: "",
     }, 
      {
         id: "8",
         title: "Regex",
         contents: RegexArticle,
-        img: reactLogo,
+        img: regexLogo,
         description: "",
     },
 ];

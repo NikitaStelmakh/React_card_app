@@ -1,5 +1,5 @@
 .video_card{
-    background-color: rgb(56, 56, 56);
+    background-color: rgb(204, 239, 255);
     position: relative;
     width: 15rem;
     text-align: left;
@@ -9,6 +9,7 @@
     box-sizing: border-box;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
     transition: all 0.9s ease;
+    
 }
 
 .video_img {

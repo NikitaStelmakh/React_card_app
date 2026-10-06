@@ -55,8 +55,8 @@ function ArticlePage() {
         >
           {article.contents}
         </ReactMarkdown>
-        <ArticleNavigation></ArticleNavigation>
       </div>
+      <ArticleNavigation></ArticleNavigation>
     </div>
   );
 }
