@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { DOCUMENTATION } from './videos.tsx';
+import { DOCUMENTATION } from './DOCUMENTATION.tsx';
 
 function ArticleNavigation () {
 const { id } = useParams();

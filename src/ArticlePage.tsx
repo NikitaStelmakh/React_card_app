@@ -1,7 +1,7 @@
-import { DOCUMENTATION } from "./videos";
+import { DOCUMENTATION } from "./DOCUMENTATION";
 import { useParams } from 'react-router-dom';
-import './VideoPage.css';
-import ArticleNavigation from './header.tsx';
+import './ArticlePage.css';
+import ArticleNavigation from './ArticleNavigation.tsx';
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/dist/esm/styles/prism";

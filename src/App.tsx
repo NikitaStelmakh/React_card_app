@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import ArticleCard from './assets/VideoCard/VideoCard.tsx';
+import ArticleCard from './assets/ArticleCard/ArticleCard.tsx';
 import './App.css';
-import { DOCUMENTATION } from './videos.tsx';
+import { DOCUMENTATION } from './DOCUMENTATION.tsx';
 import { Routes, Route } from 'react-router-dom';
-import ArticlePage from './VideoPage.tsx';
+import ArticlePage from './ArticlePage.tsx';
 
 function App() {
 
