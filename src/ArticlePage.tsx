@@ -21,8 +21,10 @@ function ArticlePage() {
 
     return (
     <div>
-      <img className="page_img" src={article.img} alt={article.title} />
-      <h1>{article.title}</h1>
+      <div className="article_header">
+        <img className="page_img" src={article.img} alt={article.title} />
+        <h1>{article.title}</h1>
+      </div>
       <div className="markdown">
         <ReactMarkdown
           components={{
