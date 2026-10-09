@@ -4,6 +4,7 @@ import './App.css';
 import { DOCUMENTATION } from './DOCUMENTATION.tsx';
 import { Routes, Route } from 'react-router-dom';
 import ArticlePage from './ArticlePage.tsx';
+import  Header  from './header.tsx'
 
 function App() {
 
@@ -21,13 +22,13 @@ function App() {
   )
 
   return (
-    
     <Routes>
 
       <Route
         path='/'
         element={
           <div className="video_container">
+            <Header></Header>
             {cardsRender}
           </div>
         }
