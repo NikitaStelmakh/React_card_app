@@ -1,9 +1,10 @@
 .video_card{
     background-color: rgb(235, 168, 168);
     position: relative;
+    display: flex;
+    flex-direction: column;
     width: 15rem;
     text-align: left;
-    border: 1px solid black;
     padding: 1rem;
     box-sizing: border-box;
     box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.25);
@@ -11,18 +12,26 @@
     
 }
 
+
+.video_card h2 {
+    font-family: 'Alatsi', sans-serif;
+    color:rgb(60, 60, 60);
+    decoration: none;
+    line-height: 1.4rem;
+    min-height: 2.8rem;
+    margin: 0.5rem 0;
+    margin-left: 0.5rem;
+}
 .video_img {
-    position: relative;
     width: 30%;
     aspect-ratio: 1 / 1;
-    top: 10px;
-    left: 10px;
-    box-sizing: border-box;
+    object-fit: contain;
+    margin: 10px;
 }
 
 
 p {
-    margin-left: 10px;
+    margin: 10px;
     color: rgb(60, 60, 60);
     text-decoration: none;
 }
@@ -32,6 +41,10 @@ a {
 }
 
 .video_footer {
+    margin-top: auto;
+    padding-top: 16px;
+    width: 100%; 
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,9 +52,12 @@ a {
 }
 
 .btn {
-    position: relative;
-    margin-right: 5px;
-
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    flex-shrink: 0;
+    width: 5.8rem;
+    height: 2.5rem;
     border: none;
     outline: none;
     cursor: pointer;
@@ -57,8 +73,10 @@ a {
 }
 
 .likes_counter {
-    position: relative;
-    margin-left: 5px;
+    align-items: center; 
+    margin: 0; 
+    min-width: 0;
+    display: flex;
 }
 
 .video_card:hover {

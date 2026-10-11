@@ -7,8 +7,13 @@ import ArticlePage from './ArticlePage.tsx';
 import  Header  from './header.tsx'
 
 function App() {
+  const [search, setSearch] = useState("");
+  const [appliedSearch, setAppliedSearch] = useState("");
 
-  const cardsRender = DOCUMENTATION.map((article) => {
+  const filteredArticles = DOCUMENTATION.filter(article => article.title.toLowerCase().includes(appliedSearch.toLowerCase()));
+
+
+  const cardsRender = filteredArticles.map((article) => {
     return (
       <ArticleCard
         key={article.id}
@@ -27,21 +32,37 @@ function App() {
       <Route
         path='/'
         element={
-          <div className="video_container">
-            <Header></Header>
-            {cardsRender}
-          </div>
+        <>
+          <Header
+            search={search}
+            setSearch={setSearch}
+            onSetSearch={() => setAppliedSearch(search)}
+            onShowAll={() => {
+              setSearch("");
+              setAppliedSearch("");
+            }}
+          />
+          <main className="main_content">
+            <div className="video_container">
+              {cardsRender}
+            </div>
+
+            {filteredArticles.length === 0 && (
+              <h2>Article not found</h2>
+              )}
+          </main>  
+        </>
         }
-        />
+      />
 
       <Route
         path='/article/:id'  
         element={<ArticlePage/>}
-        />
+      />
 
     </Routes>
     
-  )
+  );
 }; 
 
 

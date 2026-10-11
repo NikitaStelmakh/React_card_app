@@ -1,17 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&display=swap');
+
+
 #root {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
+
+.main_content {
+    max-width: 1280px;
+    margin: 0 auto; 
+    padding: 2rem; 
+    box-sizing: border-box; }
 
 .video_container {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     column-gap: 5.16rem;
-    row-gap: 2rem;
+    row-gap: 5.16rem;
     width: fit-content;
     box-sizing: border-box;
 }

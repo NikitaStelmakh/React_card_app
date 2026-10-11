@@ -2,8 +2,9 @@ body {
   font-family: "Teko", sans-serif;
   margin: 0;
   min-height: 100vh;
-  background: #dff3ff;
+  background:#dff3ff;
   background-repeat: no-repeat;
+  background-size: 240%;
 }
 
 .page_img {
@@ -43,4 +44,8 @@ body {
 
 .page_img {
 
-}    
+}  
+
+h1 {
+   font-family: 'Alatsi', sans-serif;
+}

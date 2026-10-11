@@ -19,7 +19,7 @@ function ArticleCard({title, img, id, description}: ArticleCardProps) {
         <div className="video_card">
             <Link to={`/article/${id}`} className="video_link">
               <img className="video_img" src={img} alt="example image" />
-              <p>{title}</p>
+              <h2>{title}</h2>
               <p>{description}</p>
             </Link>
             <div className="video_footer">

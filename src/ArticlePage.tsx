@@ -5,7 +5,7 @@ import ArticleNavigation from './ArticleNavigation.tsx';
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/dist/esm/styles/prism";
-
+import  Header  from './header.tsx';
 
 
 
@@ -23,6 +23,7 @@ function ArticlePage() {
     return (
     <div>
       <div className="article_header">
+        <Header></Header>
         <img className="page_img" src={article.img} alt={article.title} />
         <h1>{article.title}</h1>
       </div>
