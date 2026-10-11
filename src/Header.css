@@ -6,36 +6,17 @@
     padding: 10px 20px;
     margin-top: 0;
     min-width: 100%;
+    min-height: 5rem;
 }
 
-.search_dropdown {
-  position: relative;
-  display: block;
-}
 
-.search_toggle {
-  padding: 10px 20px;  
-  width: 42px;
-  height: 42px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  background: #eef8ff;
-  font-size: 24px;
-  transition: background 0.2s ease;
-}
 
-.search_toggle:hover {
-  background: #d6edff;
-}
-
-.search_menu {
-  position: absolute;
+.header_search {
   top: 100%;
   left: 0;
   z-index: 10;
-  background: white;
   padding: 10px;
+  height: 2.3rem;
 }
 
 .search_menu input {

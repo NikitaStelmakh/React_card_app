@@ -57,7 +57,7 @@ export const DOCUMENTATION = [
         title: "Vite",
         contents: viteArticle,
         img: viteLogo,
-        description: "",
+        description: "A Modern Frontend Build Tool",
     }, 
      {
         id: "7",

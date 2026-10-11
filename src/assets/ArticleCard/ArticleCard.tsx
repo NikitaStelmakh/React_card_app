@@ -7,7 +7,7 @@ export type ArticleCardProps = {
     contents: any;
     img: string;
     id: string;
-    description: string;
+    description?: string;
 }
 
 function ArticleCard({title, img, id, description}: ArticleCardProps) {
@@ -16,13 +16,13 @@ function ArticleCard({title, img, id, description}: ArticleCardProps) {
     const increaseLikesCount = () => setLikesCount(likesCount +1);
 
     return (
-        <div className="video_card">
-            <Link to={`/article/${id}`} className="video_link">
-              <img className="video_img" src={img} alt="example image" />
+        <div className="article_card">
+            <Link to={`/article/${id}`} className="article_link">
+              <img className="article_img" src={img} alt="example image" />
               <h2>{title}</h2>
               <p>{description}</p>
             </Link>
-            <div className="video_footer">
+            <div className="article_footer">
                 <div className="likes_counter">
                     <p>Usefull: {likesCount}</p>
                 </div>

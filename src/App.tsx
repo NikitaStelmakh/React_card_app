@@ -21,7 +21,7 @@ function App() {
         title={article.title}
         contents={article.contents}
         img={article.img}
-        description={article.description}/>
+         />
       );
     }
   )
@@ -43,7 +43,7 @@ function App() {
             }}
           />
           <main className="main_content">
-            <div className="video_container">
+            <div className="article_container">
               {cardsRender}
             </div>
 

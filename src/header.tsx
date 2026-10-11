@@ -10,8 +10,6 @@ type HeaderProps = {
 
 function Header ({search, setSearch, onSetSearch, onShowAll}: HeaderProps) {
 
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-
 
   const handleSearch = () => {
     onSetSearch();
@@ -19,25 +17,21 @@ function Header ({search, setSearch, onSetSearch, onShowAll}: HeaderProps) {
   
   const handleShowAll = () => {
     onShowAll();
-    setIsSearchOpen(false);
   };
 
   return (
-  <div className="header_container"> 
-
-    <div className="search_dropdown">
-        <button className="search_toggle" onClick={() => setIsSearchOpen(!isSearchOpen)}>
-          Dropdown
-        </button>
-    
-    
-    {isSearchOpen && (
-    <div className="search_menu">
+  <div className="header_container"> {(
+    <div className="header_search">
       <input 
          type="text"
          placeholder="Search articles..."
          value={search}
          onChange={(event) => setSearch(event.target.value)}
+         onKeyDown={(event) => {
+            if (event.key === "Enter") {
+                handleSearch();
+            }
+         }}
        />
        
     
@@ -50,10 +44,7 @@ function Header ({search, setSearch, onSetSearch, onShowAll}: HeaderProps) {
       </button>
     </div>
     )}
-    </div>
-
-   
-  </div>)
+    </div>)
 
 }
 

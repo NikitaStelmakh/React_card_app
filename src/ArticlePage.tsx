@@ -24,10 +24,14 @@ function ArticlePage() {
     <div>
       <div className="article_header">
         <Header></Header>
-        <img className="page_img" src={article.img} alt={article.title} />
-        <h1>{article.title}</h1>
       </div>
-      <div className="markdown">
+      <div className="main_content">
+        <div className="page_header">
+          <img className="img_page" src={article.img} alt={article.title} />
+          <h1 className="title_page">{article.title}</h1>
+        </div>
+        <h2 className="description_page">{article.description}</h2>  
+        <div className="markdown">
         <ReactMarkdown
           components={{
             code({ className, children, ...props }) {
@@ -39,7 +43,7 @@ function ArticlePage() {
                   language={match[1]}
                   PreTag="div"
                   customStyle={{
-                    fontFamily: '"JetBrains Mono", monospace',
+                     fontFamily: '"JetBrains Mono", monospace',
                      backgroundColor: "#eef8ff",
                      padding: "20px",
                      borderRadius: "10px",
@@ -61,6 +65,7 @@ function ArticlePage() {
         </ReactMarkdown>
       </div>
       <ArticleNavigation></ArticleNavigation>
+      </div>
     </div>
   );
 }
