@@ -61,14 +61,15 @@ a {
     border: none;
     outline: none;
     cursor: pointer;
-    background-color: rgb(151, 220, 255);
+    background-color: #00639D;
     transition: all 0.3s ease;
+    color: white;
 }
 
 .btn:hover {
     border: none;
     outline: none;
-    background: linear-gradient(45deg, rgb(227, 246, 255), rgb(151, 220, 255));
+    background: #00A1FF;
     transition: all 0.9s ease;
 }
 
